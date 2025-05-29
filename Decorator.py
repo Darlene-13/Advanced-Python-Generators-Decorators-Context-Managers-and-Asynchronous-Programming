@@ -89,5 +89,15 @@ class MyClass:
 obj = MyClass()
 obj.say_hello()
 
+# 3.Class Decorators
+def fun(cls):
+    cls.class_name = cls.__name__
+    return cls
+
+@fun
+class Person:
+    pass
+
+print(Person.class_name)
 
 
